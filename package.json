@@ -1,0 +1,23 @@
+{
+  "name": "joon",
+  "version": "1.0.0",
+  "description": "Clipboard history",
+  "main": "src/index.ts",
+  "author": "caleb.peterson@cubicle6.com",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon --watch './**/*.ts' --exec 'ts-node' src/index.ts",
+    "start": "ts-node src/index.ts",
+    "postinstall": "brew install icanhazshortcut; brew install choose-gui"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.0",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "clipboard-sys": "^1.2.1",
+    "node-global-key-listener": "^0.1.1"
+  }
+}
