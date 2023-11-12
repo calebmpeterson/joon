@@ -15,7 +15,7 @@ const POLL_INTERVAL = 1000;
 const URL_PATTERN = /https?:\/\/\S+/i;
 
 //----------------------------------------------------------------
-// Clipboard monitoring
+// Clipboard content capturing
 //----------------------------------------------------------------
 
 const hasUrl = (str: string) => {
@@ -40,6 +40,10 @@ const maybeAddToHistory = (content: string) => {
   }
 };
 
+//----------------------------------------------------------------
+// Clipboard monitoring
+//----------------------------------------------------------------
+
 let prior: string;
 
 const interval = setInterval(async () => {
@@ -49,12 +53,6 @@ const interval = setInterval(async () => {
     prior = content;
   }
 }, POLL_INTERVAL);
-
-//----------------------------------------------------------------
-// Clipboard retrieval
-//----------------------------------------------------------------
-
-//...
 
 //----------------------------------------------------------------
 // Process cleanup

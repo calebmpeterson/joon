@@ -7,8 +7,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon --watch './**/*.ts' --exec 'ts-node' src/index.ts",
-    "start": "ts-node src/index.ts",
-    "postinstall": "brew install icanhazshortcut; brew install choose-gui"
+    "start": "ts-node src/index.ts"
   },
   "devDependencies": {
     "@types/node": "^20.9.0",
